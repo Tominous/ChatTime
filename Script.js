@@ -18,8 +18,9 @@ register("chat", function(event, message) {
         var hours = date.getHours();
         var minutes = date.getMinutes();
         var seconds = date.getSeconds();
+        var milliseconds = date.getMilliSeconds();
         var message = ChatLib.getChatMessage(event, true);
-        ChatLib.chat(message.replace(message, "&4[&6" + hours + ":" + minutes + ":" + seconds + "&4]&r " + message));
+        ChatLib.chat(message.replace(message, "&4[&6" + hours + ":" + minutes + ":" + seconds + ":" + milliseconds "&4]&r " + message));
         cancel(event);
     }
 });
